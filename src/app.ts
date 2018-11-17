@@ -1,21 +1,12 @@
-// Object
-const myObj = {
-  myMethod() {
-    console.log('Object', this);
-  }  
-};
-myObj.myMethod()
-
-// Function
-function myFunction(...text: string[] ) {
-    console.log('Function', this, text);
+class MyClass {
+    myMethod() {
+        const foo = 123;
+        console.log('1', this);
+        setTimeout(function() {
+            console.log(this);
+        }, 0);
+    }
 }
 
-const bindFunction = myFunction.bind(myObj);
-bindFunction('ABC', 'DEF');
-bindFunction('GHI', 'JKL');
-
-
-myFunction('ABC', 'DEF');
-myFunction.call(myObj, 'ABC', 'DEF', 'GHI');
-myFunction.apply(myObj, ['ABC', 'DEF']);
+const myInstance = new MyClass();
+myInstance.myMethod();
