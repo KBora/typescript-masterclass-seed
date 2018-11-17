@@ -3,7 +3,7 @@ class MyClass {
         const foo = 123;
         console.log('1', this);
         setTimeout(() => {
-            console.log(this);
+            console.log('2', this);
         }, 0);
     }
 }
