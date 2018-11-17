@@ -2,7 +2,7 @@ class MyClass {
     myMethod() {
         const foo = 123;
         console.log('1', this);
-        setTimeout(function() {
+        setTimeout(() => {
             console.log(this);
         }, 0);
     }
