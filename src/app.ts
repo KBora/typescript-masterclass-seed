@@ -7,10 +7,9 @@ const myObj = {
 myObj.myMethod()
 
 // Function
-function myFunction() {
-    console.log('Function', this);
+function myFunction(text: string, arg2: string) {
+    console.log('Function', this, text, arg2);
 }
-myFunction();
-myFunction.call(myObj);
-myFunction.call([]);
+myFunction('ABC', 'DEF');
+myFunction.call(myObj, 'ABC', 'DEF');
 
