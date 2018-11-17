@@ -12,4 +12,4 @@ function myFunction(text: string, arg2: string) {
 }
 myFunction('ABC', 'DEF');
 myFunction.call(myObj, 'ABC', 'DEF');
-
+myFunction.apply(myObj, ['ABC', 'DEF']);
